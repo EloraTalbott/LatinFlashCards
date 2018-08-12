@@ -1,5 +1,6 @@
-FSharp.Data
 group Server
 FSharp.Core
 Saturn
 Fable.JsonConverter
+FSharp.Data
+Saturn.Extensions.Authorization

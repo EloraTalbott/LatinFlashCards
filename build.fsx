@@ -164,7 +164,7 @@ Target.create "AppService" (fun _ ->
     let destinationUri = sprintf "https://%s.scm.azurewebsites.net/api/zipdeploy" appName
     let client = new Net.WebClient(Credentials = Net.NetworkCredential("$" + appName, appPassword))
     Trace.tracefn "Uploading %s to %s" zipFile destinationUri
-    client.UploadData(destinationUri, IO.File.ReadAllBytes zipFile) |> ignore)																  
+    client.UploadData(destinationUri, IO.File.ReadAllBytes zipFile) |> ignore)
 
 open Fake.Core.TargetOperators
 
@@ -174,9 +174,7 @@ open Fake.Core.TargetOperators
     ==> "Bundle"
     ==> "ArmTemplate"
     ==> "AppService"
-				
-					 
-					
+
 
 "Clean"
     ==> "InstallClient"

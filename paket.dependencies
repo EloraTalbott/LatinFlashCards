@@ -1,6 +1,5 @@
 source https://www.nuget.org/api/v2
 
-nuget FSharp.Data
 group Server
     storage: none
     source https://api.nuget.org/v3/index.json
@@ -8,6 +7,8 @@ group Server
     nuget FSharp.Core
     nuget Saturn
     nuget Fable.JsonConverter
+    nuget FSharp.Data prerelease
+    nuget Saturn.Extensions.Authorization
 
 group Client
     storage: none

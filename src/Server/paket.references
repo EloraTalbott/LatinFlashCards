@@ -1,0 +1,5 @@
+FSharp.Data
+group Server
+FSharp.Core
+Saturn
+Fable.JsonConverter

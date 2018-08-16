@@ -37,12 +37,11 @@ module.exports = {
         modules: [resolve("../../node_modules/")]
     },
     devServer: {
-        proxy: {
-            '/api/*': {
+        proxy: [{
+                context: ['/api/*','/app/*'],
                 target: 'http://localhost:' + port,
                 changeOrigin: true
-            }
-        },
+        }],
         contentBase: "./public",
         hot: true,
         inline: true

@@ -10,6 +10,8 @@ open Fable.PowerPack.Fetch
 open Shared
 
 open Fulma
+open System.Net.Http
+open System.Net.Http.Headers
 
 
 // The model holds data that you want to keep track of while the application is running

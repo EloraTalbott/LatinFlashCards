@@ -9,6 +9,8 @@ group Server
     nuget Fable.JsonConverter
     nuget FSharp.Data prerelease
     nuget Saturn.Extensions.Authorization
+    nuget Microsoft.ApplicationInsights.AspNetCore ~> 2.2
+    nuget WindowsAzure.Storage
 
 group Client
     storage: none

@@ -4,3 +4,5 @@ Saturn
 Fable.JsonConverter
 FSharp.Data
 Saturn.Extensions.Authorization
+Microsoft.ApplicationInsights.AspNetCore
+WindowsAzure.Storage

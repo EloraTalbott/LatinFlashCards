@@ -17,7 +17,7 @@ let port = 8085us
 let allFlashCards = 
   [
     {
-        Front = {Nominative = "nauta"; Genitive = "nautae" }
+        Front = {Nominative = [LatinText.Normal "nauta"]; Genitive = [LatinText.Normal "nauta"; LatinText.Macron 'e'] }
         Back = 
           {
             Declension = Declension.First
@@ -28,7 +28,7 @@ let allFlashCards =
           }
     }
     {
-        Front = {Nominative = "terra"; Genitive = "terrae" }
+        Front = {Nominative = [LatinText.Normal "terra"]; Genitive = [LatinText.Normal "terrae"] }
         Back = 
           {
             Declension = Declension.First

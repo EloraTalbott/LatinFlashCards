@@ -1,7 +1,11 @@
 namespace Shared
 
+type LatinText =
+  | Normal of string
+  | Macron of char
+
 [<CLIMutable>]
-type FlashCardFront = {Nominative:string; Genitive:string; }
+type FlashCardFront = {Nominative:LatinText list; Genitive:LatinText list; }
 type Gender = | Feminine | Masculine | Neuter
 type Declension = | First | Second | Third | Fourth | Fifth
 

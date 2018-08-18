@@ -100,11 +100,27 @@ let showCard model (dispatch : Msg -> unit) =
         
       
     | false ->
+        let latinTextToElements items =
+          items
+          |> List.map (fun s ->
+            match s with
+            | LatinText.Normal v -> str v
+            | LatinText.Macron v -> span [(DangerouslySetInnerHTML { __html = "&" + v + "macr;" }) :> IHTMLProp] []
+          )
+
+        let nominative = latinTextToElements x.Front.Nominative
+        let genitive = latinTextToElements x.Front.Genitive
+        let combinedFrontTextElements = [
+          yield! nominative
+          yield (str " / ")
+          yield! genitive
+        ]
+
         Hero.hero [ Hero.Color IsPrimary; Hero.IsHalfHeight; ] [
           Hero.head [][str " "]
           Hero.body [ Props[ OnClick (fun _ -> dispatch ShowAnswer);] ][
             Container.container [][
-              Heading.h1 [ Heading.Modifiers[ Modifier.TextAlignment (Screen.All, TextAlignment.Centered)]][str (x.Front.Nominative + " / " + x.Front.Genitive)]
+              Heading.h1 [ Heading.Modifiers[ Modifier.TextAlignment (Screen.All, TextAlignment.Centered)]][yield! combinedFrontTextElements]
           ]
           ]
           Hero.foot [][str " "]

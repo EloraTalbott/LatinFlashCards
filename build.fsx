@@ -89,10 +89,10 @@ Target.create "Build" (fun _ ->
 
 Target.create "Run" (fun _ ->
     let server = async {
-        runDotNet "watch run" serverPath
+        runTool "dotnet" "watch run" serverPath
     }
     let client = async {
-        runDotNet "fable webpack-dev-server" clientPath
+        runTool "dotnet" "fable webpack-dev-server" clientPath
     }
     let browser = async {
         do! Async.Sleep 5000

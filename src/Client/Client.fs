@@ -105,7 +105,7 @@ let showCard model (dispatch : Msg -> unit) =
           |> List.map (fun s ->
             match s with
             | LatinText.Normal v -> str v
-            | LatinText.Macron v -> span [(DangerouslySetInnerHTML { __html = "&" + v + "macr;" }) :> IHTMLProp] []
+            | LatinText.Macron v -> span [(DangerouslySetInnerHTML { __html = "&" + v.ToString() + "macr;" }) :> IHTMLProp] []
           )
 
         let nominative = latinTextToElements x.Front.Nominative

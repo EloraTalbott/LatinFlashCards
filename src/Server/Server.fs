@@ -23,7 +23,7 @@ let allFlashCards =
         Front = {Nominative = [LatinText.Normal "nauta"]; Genitive = [LatinText.Normal "nautae";] }
         Back = 
           {
-            Declension = Declension.First
+            Ending = EndingType.Declension Declension.First
             Lesson = 1
             EnglishTranslation = "sailor"
             EnglishDerivatives = ["nautical"; "nautilus";]
@@ -35,7 +35,7 @@ let allFlashCards =
         Front = {Nominative = [LatinText.Normal "terra"]; Genitive = [LatinText.Normal "terrae"] }
         Back = 
           {
-            Declension = Declension.First
+            Ending = EndingType.Declension Declension.First
             Lesson = 1
             EnglishTranslation = "earth, land"
             EnglishDerivatives = ["How am I supposed to know";]
@@ -47,7 +47,7 @@ let allFlashCards =
         Front = {Nominative = [LatinText.Normal "porta";]; Genitive = [LatinText.Normal "portae";] }
         Back = 
           {
-            Declension = Declension.First
+            Ending = EndingType.Declension Declension.First
             Lesson = 1
             EnglishTranslation = "gate"
             EnglishDerivatives = ["portal, airport, portico";]
@@ -59,7 +59,7 @@ let allFlashCards =
         Front = {Nominative = [LatinText.Normal "silva";]; Genitive = [LatinText.Normal "silvae";] }
         Back = 
           {
-            Declension = Declension.First
+            Ending = EndingType.Declension Declension.First
             Lesson = 1
             EnglishTranslation = "forest"
             EnglishDerivatives = ["silviculture";]
@@ -71,7 +71,7 @@ let allFlashCards =
         Front = {Nominative = [LatinText.Normal "gladius";]; Genitive = [LatinText.Normal "gladii";] }
         Back = 
           {
-            Declension = Declension.Second
+            Ending = EndingType.Declension Declension.Second
             Lesson = 0
             EnglishTranslation = "sword"
             EnglishDerivatives = ["How am I supposed to know";]
@@ -83,9 +83,9 @@ let allFlashCards =
         Front = {Nominative = [LatinText.Normal "servus";]; Genitive = [LatinText.Normal "servi";] }
         Back = 
           {
-            Declension = Declension.Second
+            Ending = EndingType.Declension Declension.Second
             Lesson = 0
-            EnglishTranslation = "slave"
+            EnglishTranslation = "slave, servant"
             EnglishDerivatives = ["How am I suposed to know";]
             Gender = Gender.Masculine
           }
@@ -95,7 +95,7 @@ let allFlashCards =
         Front = {Nominative = [LatinText.Normal "caelum";]; Genitive = [LatinText.Normal "caeli";] }
         Back = 
           {
-            Declension = Declension.Second
+            Ending = EndingType.Declension Declension.Second
             Lesson = 0
             EnglishTranslation = "sky,heaven"
             EnglishDerivatives = ["How am I supposed to know";]
@@ -107,7 +107,7 @@ let allFlashCards =
         Front = {Nominative = [LatinText.Normal "fillius";]; Genitive = [LatinText.Normal "filii";] }
         Back = 
           {
-            Declension = Declension.First
+            Ending = EndingType.Declension Declension.First
             Lesson = 0
             EnglishTranslation = "son"
             EnglishDerivatives = ["How am I supposed to know";]
@@ -119,7 +119,7 @@ let allFlashCards =
         Front = {Nominative = [LatinText.Normal "amicus";]; Genitive = [LatinText.Normal "amici";] }
         Back = 
           {
-            Declension = Declension.Second
+            Ending = EndingType.Declension Declension.Second
             Lesson = 0
             EnglishTranslation = "friend"
             EnglishDerivatives = ["How am I supposed to know";]
@@ -131,7 +131,7 @@ let allFlashCards =
         Front = {Nominative = [LatinText.Normal "romanus";]; Genitive = [LatinText.Normal "romani";] }
         Back = 
           {
-            Declension = Declension.Second
+            Ending = EndingType.Declension Declension.Second
             Lesson = 0
             EnglishTranslation = "roman"
             EnglishDerivatives = ["How am I supposed to know";]
@@ -143,7 +143,7 @@ let allFlashCards =
         Front = {Nominative = [LatinText.Normal "dux";]; Genitive = [LatinText.Normal "ducis";] }
         Back = 
           {
-            Declension = Declension.First
+            Ending = EndingType.Declension Declension.First
             Lesson = 0
             EnglishTranslation = "leader"
             EnglishDerivatives = ["How am I supposed to know";]
@@ -151,12 +151,11 @@ let allFlashCards =
           }
     }
 //12
-//need macrons
     {
         Front = {Nominative = [LatinText.Normal "Mar"; LatinText.Macron 'i'; LatinText.Normal "a";]; Genitive = [LatinText.Normal "Mar"; LatinText.Macron 'i'; LatinText.Normal "ae";] }
         Back = 
           {
-            Declension = Declension.First
+            Ending = EndingType.Declension Declension.First
             Lesson = 1
             EnglishTranslation = "Mary"
             EnglishDerivatives = ["How am I supposed to know";]
@@ -164,15 +163,219 @@ let allFlashCards =
           }
     }
 //13
-//need macrons
     {
         Front = {Nominative = [LatinText.Normal "gl";LatinText.Macron 'o'; LatinText.Normal "ria";]; Genitive = [LatinText.Normal "gl";LatinText.Macron 'o'; LatinText.Normal "riae";] }
         Back = 
           {
-            Declension = Declension.First
+            Ending = EndingType.Declension Declension.First
             Lesson = 1
             EnglishTranslation = "fame, glory"
             EnglishDerivatives = ["glorious, glory";]
+            Gender = Gender.Feminine
+          }
+    }
+//14
+    {
+        Front = {Nominative = [LatinText.Normal "v";LatinText.Macron 'i';LatinText.Normal "cerunt";]; Genitive = [] }
+        Back = 
+          {
+            Ending = EndingType.Conjugation Conjugation.First
+            Lesson = 0
+            EnglishTranslation = "they conquered"
+            EnglishDerivatives = ["Umm...";]
+            Gender = Gender.Feminine
+          }
+    }
+//15
+    {
+        Front = {Nominative = [LatinText.Normal "vid";LatinText.Macron 'e';LatinText.Normal "tis";]; Genitive = [] }
+        Back = 
+          {
+            Ending = EndingType.Conjugation Conjugation.First
+            Lesson = 0
+            EnglishTranslation = "you see (plural)"
+            EnglishDerivatives = ["";]
+            Gender = Gender.Feminine
+          }
+    }
+//16
+    {
+        Front = {Nominative = [LatinText.Normal "incolunt";]; Genitive = [LatinText.Normal "";] }
+        Back = 
+          {
+            Ending = EndingType.Conjugation Conjugation.First
+            Lesson = 0
+            EnglishTranslation = "they inhabit"
+            EnglishDerivatives = ["";]
+            Gender = Gender.Feminine
+          }
+    }
+//17
+    {
+        Front = {Nominative = [LatinText.Normal "vict"; LatinText.Macron 'o'; LatinText.Normal "ria";]; Genitive = [LatinText.Normal "vict"; LatinText.Macron 'o'; LatinText.Normal "riae";] }
+        Back = 
+          {
+            Ending = EndingType.Declension Declension.First
+            Lesson = 0
+            EnglishTranslation = "victory"
+            EnglishDerivatives = ["victory";]
+            Gender = Gender.Feminine
+          }
+    }
+//18
+    {
+        Front = {Nominative = [LatinText.Normal "propter";]; Genitive = [LatinText.Normal "";] }
+        Back = 
+          {
+            Ending = EndingType.NotApplicable
+            Lesson = 0
+            EnglishTranslation = "on account of"
+            EnglishDerivatives = ["Umm...";]
+            Gender = Gender.Feminine
+          }
+    }
+//19
+    {
+        Front = {Nominative = [LatinText.Normal "R";LatinText.Macron 'o';LatinText.Normal "ma";]; Genitive = [LatinText.Normal "R";LatinText.Macron 'o';LatinText.Normal "mae";] }
+        Back = 
+          {
+            Ending = EndingType.Declension Declension.First
+            Lesson = 0
+            EnglishTranslation = "Rome"
+            EnglishDerivatives = ["Rome";]
+            Gender = Gender.Feminine
+          }
+    }
+//20
+//need macron in i
+    {
+        Front = {Nominative = [LatinText.Normal "Gallus";]; Genitive = [LatinText.Normal "Gall";LatinText.Macron 'i';] }
+        Back = 
+          {
+            Ending = EndingType.Declension Declension.Second
+            Lesson = 0
+            EnglishTranslation = "a Gaul"
+            EnglishDerivatives = ["Umm...";]
+            Gender = Gender.Feminine
+          }
+    }
+//21
+    {
+        Front = {Nominative = [LatinText.Normal "Gallia";]; Genitive = [LatinText.Normal "Galliae";] }
+        Back = 
+          {
+            Ending = EndingType.Declension Declension.First
+            Lesson = 0
+            EnglishTranslation = "Gaul"
+            EnglishDerivatives = ["Umm...";]
+            Gender = Gender.Feminine
+          }
+    }
+//22
+    {
+        Front = {Nominative = [LatinText.Normal "oppidum";]; Genitive = [LatinText.Normal "oppid";LatinText.Macron 'i';] }
+        Back = 
+          {
+            Ending = EndingType.Declension Declension.Second
+            Lesson = 0
+            EnglishTranslation = "town"
+            EnglishDerivatives = ["Umm...";]
+            Gender = Gender.Feminine
+          }
+    }
+//23
+    {
+        Front = {Nominative = [LatinText.Normal "Chr";LatinText.Macron 'i';LatinText.Normal "stus";]; Genitive = [LatinText.Normal "Chr";LatinText.Macron 'i';LatinText.Normal "st";LatinText.Macron 'i';] }
+        Back = 
+          {
+            Ending = EndingType.Declension Declension.Second
+            Lesson = 0
+            EnglishTranslation = "Christ"
+            EnglishDerivatives = ["Umm...";]
+            Gender = Gender.Feminine
+          }
+    }
+//24
+    {
+        Front = {Nominative = [LatinText.Normal "per";LatinText.Macron 'i';LatinText.Normal "culum";]; Genitive = [LatinText.Normal "per";LatinText.Macron 'i';LatinText.Normal "cul";LatinText.Macron 'i';] }
+        Back = 
+          {
+            Ending = EndingType.Declension Declension.Second
+            Lesson = 0
+            EnglishTranslation = "danger"
+            EnglishDerivatives = ["Umm...";]
+            Gender = Gender.Feminine
+          }
+    }
+//25
+    {
+        Front = {Nominative = [LatinText.Normal "praemium";]; Genitive = [LatinText.Normal "praeni";LatinText.Macron 'i'] }
+        Back = 
+          {
+            Ending = EndingType.Declension Declension.Second
+            Lesson = 0
+            EnglishTranslation = "reward"
+            EnglishDerivatives = ["Umm...";]
+            Gender = Gender.Feminine
+          }
+    }
+//26
+    {
+        Front = {Nominative = [LatinText.Normal "r";LatinText.Macron 'e';LatinText.Normal "gnum";]; Genitive = [LatinText.Normal "r";LatinText.Macron 'e';LatinText.Normal "gn";LatinText.Macron 'i';] }
+        Back = 
+          {
+            Ending = EndingType.Declension Declension.Second
+            Lesson = 0
+            EnglishTranslation = "kingdom, royal power"
+            EnglishDerivatives = ["Umm...";]
+            Gender = Gender.Feminine
+          }
+    }
+//27
+    {
+        Front = {Nominative = [LatinText.Normal "bellum";]; Genitive = [LatinText.Normal "bell"; LatinText.Macron 'i'] }
+        Back = 
+          {
+            Ending = EndingType.Declension Declension.Second
+            Lesson = 0
+            EnglishTranslation = "war"
+            EnglishDerivatives = ["Umm...";]
+            Gender = Gender.Feminine
+          }
+    }
+//28
+    {
+        Front = {Nominative = [LatinText.Normal "Chr";LatinText.Macron 'i';LatinText.Normal "sti";LatinText.Macron 'a';LatinText.Normal "nus";]; Genitive = [LatinText.Normal "Chr";LatinText.Macron 'i';LatinText.Normal "sti";LatinText.Macron 'a';LatinText.Normal "ni";] }
+        Back = 
+          {
+            Ending = EndingType.Declension Declension.Second
+            Lesson = 0
+            EnglishTranslation = "Christian"
+            EnglishDerivatives = ["Umm...";]
+            Gender = Gender.Feminine
+          }
+    }
+//29
+    {
+        Front = {Nominative = [LatinText.Normal "imperium";]; Genitive = [LatinText.Normal "imperi";LatinText.Macron 'i'] }
+        Back = 
+          {
+            Ending = EndingType.Declension Declension.Second
+            Lesson = 0
+            EnglishTranslation = "comand, power, empire"
+            EnglishDerivatives = ["Umm...";]
+            Gender = Gender.Feminine
+          }
+    }
+//30!
+    {
+        Front = {Nominative = [LatinText.Normal "Deus";]; Genitive = [LatinText.Normal "De";LatinText.Macron 'i'] }
+        Back = 
+          {
+            Ending = EndingType.Declension Declension.Second
+            Lesson = 0
+            EnglishTranslation = "God"
+            EnglishDerivatives = ["Umm...";]
             Gender = Gender.Feminine
           }
     }
@@ -182,14 +385,20 @@ let getRandomFlashCard () =
   let rnd = System.Random()  
   allFlashCards |> List.item (rnd.Next(allFlashCards.Length))
 
-let getInitCounter() : Task<FlashCardData> = task { return (getRandomFlashCard ()) }
+let getInitCard() : Task<FlashCardData> = task { return (getRandomFlashCard ()) }
+let getCards() : Task<FlashCardData list> = task { return (allFlashCards) }
 let getHello() : Task<string> = task { return "Hello" }
 
 let webApp = router {
     get "/api/init" (fun next ctx ->
         task {
-            let! counter = getInitCounter()
-            return! Successful.OK counter next ctx
+            let! card = getInitCard()
+            return! Successful.OK card next ctx
+        })
+    get "/api/getAll" (fun next ctx ->
+        task {
+            let! cards = getCards()
+            return! Successful.OK cards next ctx
         })
     get "/api/hello" (fun next ctx -> 
         task { 
